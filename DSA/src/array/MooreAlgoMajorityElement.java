@@ -24,7 +24,7 @@ public class MooreAlgoMajorityElement {
 				majCount++;
 			}
 		}
-		return majCount >  (numbers.length / 2)  ? majEle : -1;
+		return majCount >  (numbers.length/2)  ? majEle : -1;
 	}
 	public static void main(String args[]) {
 		try (Scanner scObj = new Scanner(System.in)) {
