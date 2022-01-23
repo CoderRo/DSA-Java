@@ -35,7 +35,7 @@ public class BinarySearchRotatedArray {
 			nums[i] = sbObj.nextInt();
 		}
 		int numberToSearched = sbObj.nextInt();
-		BinarySearchRotatedArray newObj = new BinarySearchRotatedArray();
-		System.out.print(newObj.BinarySearchingRotatedArray(nums,numberToSearched)); 
+		BinarySearchRotatedArray BSObj = new BinarySearchRotatedArray();
+		System.out.print(BSObj.BinarySearchingRotatedArray(nums,numberToSearched)); 
 	}
 }
