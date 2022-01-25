@@ -12,7 +12,6 @@ public class BinarySearch {
 			if (nums[mid] == elementToSearch ) {
 				return mid;
 			}
-			
 			if ( nums[mid] > elementToSearch ) {
 				high = mid - 1;
 			} else {
@@ -49,7 +48,7 @@ public class BinarySearch {
 		
 		int  elementToSearch = ScObj.nextInt();
 		BinarySearch bsObj = new BinarySearch();
-//		System.out.println(bsObj.findElement(a ,elementToSearch));
+		System.out.println(bsObj.findElement(a ,elementToSearch));
 		System.out.println(bsObj.findElementRecursion(a,elementToSearch,0,a.length-1));
 	}
 }
