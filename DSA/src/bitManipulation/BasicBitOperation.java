@@ -14,9 +14,16 @@ public class BasicBitOperation {
 		return 1;
 	}
 	
-	public int settingIthBit( int num , int i) {
+	public int settingIthBit ( int num , int i) {
 		int mask = 1<<i;
 		return num | mask;
+	}
+	
+	public int clearIthBit (int num, int i) {
+		int mask = 1 << i;
+		mask = ~mask;
+		return num&mask;
+		
 	}
 	
 	public static void main(String args[]) {
@@ -26,7 +33,11 @@ public class BasicBitOperation {
 		int i = sbObj.nextInt();
 		BasicBitOperation newObj = new BasicBitOperation();
 //		System.out.println(newObj.findingIthBit(n,i));
-		System.out.println(newObj.settingIthBit(n,i));
-		System.out.println(Integer.toBinaryString(newObj.settingIthBit(n,i)));
+		
+//		System.out.println(newObj.settingIthBit(n,i));
+//		System.out.println(Integer.toBinaryString(newObj.settingIthBit(n,i)));
+		
+		System.out.println(newObj.clearIthBit(n,i));
+		System.out.println(Integer.toBinaryString(newObj.clearIthBit(n,i)));
 	}
 }
