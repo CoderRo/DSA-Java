@@ -14,12 +14,19 @@ public class BasicBitOperation {
 		return 1;
 	}
 	
+	public int settingIthBit( int num , int i) {
+		int mask = 1<<i;
+		return num | mask;
+	}
+	
 	public static void main(String args[]) {
 		Scanner sbObj = new Scanner(System.in);
 		int n = sbObj.nextInt();
+		System.out.println(Integer.toBinaryString(n));
 		int i = sbObj.nextInt();
 		BasicBitOperation newObj = new BasicBitOperation();
-		System.out.println(Integer.toBinaryString(n));
-		System.out.println(newObj.findingIthBit(n,i));
+//		System.out.println(newObj.findingIthBit(n,i));
+		System.out.println(newObj.settingIthBit(n,i));
+		System.out.println(Integer.toBinaryString(newObj.settingIthBit(n,i)));
 	}
 }
