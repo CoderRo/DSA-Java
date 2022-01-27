@@ -2,7 +2,7 @@ package bitManipulation;
 
 import java.util.Scanner;
 
-public class FindithBit {
+public class BasicBitOperation {
 	public int findingIthBit(int num, int i) {
 		if (num == 0) {
 			return 0;
@@ -18,7 +18,7 @@ public class FindithBit {
 		Scanner sbObj = new Scanner(System.in);
 		int n = sbObj.nextInt();
 		int i = sbObj.nextInt();
-		FindithBit newObj = new FindithBit();
+		BasicBitOperation newObj = new BasicBitOperation();
 		System.out.println(Integer.toBinaryString(n));
 		System.out.println(newObj.findingIthBit(n,i));
 	}
