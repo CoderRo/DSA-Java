@@ -6,11 +6,12 @@ public class NumBitToChangeAtoB {
 	
 	public int bitCountToChangeAtoB(int a ,int b) {
 		int c = a^b, count = 0;
+		System.out.println(Integer.toBinaryString(c));
 		while ( c !=0 ) {
-			 c = c >> 1;
 			if((c & 1) == 1 ) {
 				count++;
 			}
+			c = c >> 1;
 		}
 		return count;
 	}
