@@ -20,6 +20,7 @@ public class FindUniqueElementWIthKRepeating {
 			sum += ((count[i]%3)*(1<<i));
 		}
 		System.out.println(sum);
+		
 	}
 	
 	public static void main(String args[]) {
