@@ -19,8 +19,6 @@ public class TrailingZerosCount {
     	int n = scObj.nextInt();
     	TrailingZerosCount newObj = new TrailingZerosCount();
     	System.out.println(Integer.toBinaryString(n));
-    	System.out.println(newObj.solve(n));
-    	
+    	System.out.println(newObj.solve(n));	
     }
-
 }
