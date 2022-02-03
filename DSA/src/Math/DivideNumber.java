@@ -15,6 +15,8 @@ public class DivideNumber {
 	public int divideNum(int a, int b) {
 		int sign = ((a>0) ^ (b>0)) ? -1 : 1;
 		int quotient = 0;
+		a =  Math. abs(a);
+		b =  Math. abs(b);
 		while (a >= b) {
 			a-=b;
 			quotient++;
