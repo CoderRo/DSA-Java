@@ -2,11 +2,11 @@ package bitManipulation;
 
 import java.util.Scanner;
 
-public class abc {
+public class cntBitss {
 	
     public int cntBits(int[] A) {
         int n = A.length;
-        int int_size = 32;
+        int int_size = 31;
         long count = 0;
         long totalCount = 0;
         for( int j = 0 ; j < int_size ; j++) {
@@ -29,7 +29,7 @@ public class abc {
 		for( int i = 0 ; i < n ; i++) {
 			num[i] = ScObj.nextInt();
 		}
-		abc newObj = new abc();
+		cntBitss newObj = new cntBitss();
 		newObj.cntBits(num);
 	}
 }
