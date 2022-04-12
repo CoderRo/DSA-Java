@@ -6,7 +6,7 @@ import java.util.HashMap;
 
 public class distinctElementInWindowHashMap {
 	
-	public void distinctElements(ArrayList<Integer> a , int brackSize) {
+	public void findDistinctElements(ArrayList<Integer> a , int brackSize) {
 		int a_size = a.size();
 		HashMap<Integer,Integer> hp = new HashMap<Integer,Integer>();
 		if ( a_size > brackSize ) {
@@ -32,7 +32,8 @@ public class distinctElementInWindowHashMap {
 		for ( int i = 0 ; i < a_size ; i++ ) {
 			arr.add(scObj.nextInt());
 		}
-		int brack_size = scObj.nextInt();
-		
+		int window_size = scObj.nextInt();
+		distinctElementInWindowHashMap newObj = new distinctElementInWindowHashMap();
+		newObj.findDistinctElements(arr,window_size);
 	}
 }
