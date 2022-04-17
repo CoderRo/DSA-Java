@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class subArrayCount {
+	// subArrayCount brute force 
 	 int subArrayCount( ArrayList<Integer> a , int targetElement ) {
 	        int currSum = 0;int count = 0;int n = a.size();
 	        for( int start = 0 ; start  < n ; start++) {
@@ -20,6 +21,21 @@ public class subArrayCount {
 	        return count;
 	    }
 	    
+		 int subarrayCount(ArrayList<Integer> a , int targetElement) {
+			 int count = 0 ; int currSum = 0;
+			 int n = a.size();
+			 for ( int i = 0 ; i < n ; i++ ) {
+				 for ( int j = i ; i < n ; i++ ) {
+					 currSum =+ a.get(i);
+					 if( currSum < targetElement ) {
+						 count++;
+					 }else {
+						 break;
+					 }
+				 }
+			 }
+			 return count;
+		 }
 	    public static void main(String args[]) {
 	        Scanner scObj = new Scanner(System.in);
 	        int n = scObj.nextInt();
@@ -29,6 +45,6 @@ public class subArrayCount {
 	        }
 	        int targetElement = scObj.nextInt();
 	        subArrayCount obj = new subArrayCount();
-	        System.out.println(obj.subArrayCount(arr,targetElement));
+	        System.out.println(obj.subarrayCount(arr,targetElement));
 	    }
 }
