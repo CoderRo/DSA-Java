@@ -17,9 +17,8 @@ public class islandProblemDFS {
 		return a;
 	}
 	
-	static boolean isValid(int row , int col , int row_index, int col_index) {
-		
-		return ();
+	static boolean isValid(int row , int col , int row_index, int col_index) {	
+		return (row_index >= 0 && row_index < row && col_index >= 0 && col_index < col);
 	}
 	
 	static void DFS(int [][] a,int row_index, int col_index) {
@@ -57,10 +56,22 @@ public class islandProblemDFS {
 		}
 		return a;
 	}
+	static void print2DArray(int[][] a) {
+		int row = a.length;
+		int col = a[0].length;
+		for ( int i = 0 ; i < row ; i++) {
+			for ( int j = 0 ; j < col; j++) {
+				System.out.print(a[i][j] + " ");
+			}
+			System.out.println();
+		}
+	}
 	public static void main (String args[]) {
 		int row = scObj.nextInt();
 		int col = scObj.nextInt();
 		int a[][] = get2dArray(row,col);
-		
+		print2DArray(a);
+		a = ReplaceZeroes(a);
+		print2DArray(a);	
 	}
 }
