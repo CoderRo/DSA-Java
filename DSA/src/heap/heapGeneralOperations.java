@@ -25,6 +25,28 @@ public class heapGeneralOperations {
 		}
 		size++;
 	}
+	public void delete() {
+		heap[1] = heap[size];
+		size--;
+		heapify(1);
+	}
+	public void heapify(int node_index) {
+		int left = node_index*2;
+		int right = node_index*2 + 1;
+		int largest=node_index;
+		if( left <= size && heap[left] > heap[largest] ) {
+			largest = left;
+		}
+		if ( right <= size && heap[right] > heap[largest]) {
+			largest = right;
+		}
+		if (node_index != largest) {
+			int temp = heap[largest];
+			heap[largest] = heap[node_index];
+			heap[node_index] = temp;
+			heapify(largest);
+		}
+	}
 	public void show() {
 		for (int i = 1 ; i <= size ; i++ ) {
 			System.out.println(heap[i]+" ");
@@ -45,6 +67,9 @@ public class heapGeneralOperations {
 			switch (input) {
 				case 1 :
 					heapObj.insert(scObj.nextInt());
+					break;
+				case 2 :
+					heapObj.delete();
 					break;
 				case 3 :
 					heapObj.show();
