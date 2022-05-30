@@ -23,21 +23,23 @@ public class reverseString2 {
 		int rowLen = a.length - 1 ;
 		int start = 0;
 		int end = 0; 
-		while (a[end] != ' ') {
-			 if ( end != rowLen) {
+		while (end <= rowLen) {
+			 if ( end == rowLen) {
 				 a = reverseString(a,start,end);
 				 break;
 			 }
-			 a = reverseString(a,start,end -1);
-			 start = end + 1 ;
-			 end = start;
+			 if (a[end] == ' ') {
+				 a = reverseString(a,start,end -1);
+				 start = end + 1 ;
+				 end = start;
+			 }
+			 end++;
 		}
 		return a;
 	}
 	public static void main(String args[]) {
 		Scanner scObj = new Scanner(System.in);
 		char string[] = scObj.nextLine().toCharArray();
-		System.out.println(reverseString(string,0,string.length-1));
 		System.out.println(reverseWordsInRow(string));
 	}
 }
