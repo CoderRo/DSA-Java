@@ -12,7 +12,6 @@ public class MaximumCharOccurenceInString {
 			alpha[(int)(toLowerCase(arr[i]) - 'a')]++;
 		}
 		for ( int i = 0 ; i < 26 ; i++ ) {
-			System.out.println(alpha[i]);
 			if (max < alpha[i]) {
 				max = alpha[i];
 				maxChar = (char) ('a' +  i);
